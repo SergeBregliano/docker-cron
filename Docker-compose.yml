@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  cron:
+    build: docker/cron
+    restart: unless-stopped
+    volumes:
+      - ./appData/cron:/etc/periodic
+      # access docker containers outside this container
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: crond -f -l 8
