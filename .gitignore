@@ -1,3 +1,4 @@
+.DS_Store
 /appData
 .env
 docker-compose.override.yml
