@@ -32,7 +32,7 @@ Les scripts de commande sont à placer dans le répertoire correspondant à la t
 
 **Attention** : le nom des script ne doit pas contenir de point sous peine de ne pas s'executer.
 
-#### Exemple de script pour lancer un container
+#### Exemple de script pour lancer un container test
 
 La commande suivante lance un container Busybox et affiche l'heure (le container est détruit après execution via le paramètre  ``--rm``) .
 
@@ -48,6 +48,18 @@ Une fois les script écrits, lancer la commande suivante pour les rendre exécut
 ```shell
 chmod -R a+x appData/cron/
 ```
+
+### Tests
+
+Il est possible de tester si un script fonctionnera correctement via la commande suivante :
+
+```shell
+run-parts --test /etc/periodic/1min
+```
+
+Le retour doit alors lister les différents scripts présents dans le dossier ``/etc/periodic/1min``.
+
+En enregistrant l'exemple de script sous le nom ``test_cron`` dans le dossier ``./appData/cron/1min/``  les logs de la commande ``docker compose up`` devraient faire apparaitre la date et l'heure toutes les minutes.
 
 
 
