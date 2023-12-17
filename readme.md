@@ -43,7 +43,13 @@ docker run --rm busybox date
 
 #### Les scripts doivent être executables
 
-Une fois les script écrits, lancer la commande suivante pour les rendre exécutables :
+Une fois les script écrits, lancer le fichier ``make_executable.sh`` comme suit :
+
+```shell
+sh ./make_executable.sh
+```
+
+Ou lancer manuellement la commande suivante pour les rendre exécutables :
 
 ```shell
 chmod -R a+x appConfig/cron/
