@@ -6,7 +6,7 @@ Basé sur la dernière version [Linux Alpine officielle.](https://hub.docker.com
 
 ## Installation
 
-Les scripts de commande sont à placer dans le dossier ``appData/cron/``.
+Les scripts de commande sont à placer dans le dossier ``appConfig/cron/``.
 L'architecture de base prend en charge les temporalités suivantes :
 
 - Toutes les 1 minute
@@ -46,7 +46,7 @@ docker run --rm busybox date
 Une fois les script écrits, lancer la commande suivante pour les rendre exécutables :
 
 ```shell
-chmod -R a+x appData/cron/
+chmod -R a+x appConfig/cron/
 ```
 
 ### Tests
